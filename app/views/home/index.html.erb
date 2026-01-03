@@ -1,0 +1,186 @@
+<!-- Hero Section -->
+<section class="position-relative py-5 overflow-hidden">
+  <div class="row align-items-center min-vh-75">
+    <div class="col-lg-6 ps-lg-5" data-aos="fade-right">
+      <span class="badge bg-light text-primary border rounded-pill px-3 py-2 mb-3 shadow-sm">
+        <i class="fas fa-star me-1 icon-pulse"></i> New Collection 2026
+      </span>
+      <h1 class="display-2 fw-bold mb-4 lh-tight">
+        Discover <span class="text-gradient">Premium</span> <br> 
+        Lifestyle Essentials
+      </h1>
+      <p class="lead text-muted mb-5 pe-lg-5">
+        Curated for quality, designed for life. Experience shopping that understands your taste for elegance and innovation.
+      </p>
+      <div class="d-flex gap-3">
+        <a href="/products" class="btn btn-primary btn-lg px-5 shadow-lg">
+          Shop Now
+        </a>
+        <a href="#featured" class="btn btn-outline-dark btn-lg px-4">
+          View Trends
+        </a>
+      </div>
+      
+      <div class="row mt-5 pt-4 text-center">
+         <div class="col-4">
+           <h4 class="fw-bold mb-0">50k+</h4>
+           <small class="text-muted">Happy Customers</small>
+         </div>
+         <div class="col-4 border-start border-end">
+           <h4 class="fw-bold mb-0">100%</h4>
+           <small class="text-muted">Quality Guarantee</small>
+         </div>
+         <div class="col-4">
+           <h4 class="fw-bold mb-0">24/7</h4>
+           <small class="text-muted">Support</small>
+         </div>
+      </div>
+    </div>
+    
+    <div class="col-lg-6 position-relative" data-aos="fade-left">
+
+      <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+           class="img-fluid rounded-4 shadow-lg position-relative rotate-3 hover-scale transition-all" 
+           alt="Fashion Model">
+      
+      <!-- Floating Card -->
+      <div class="card glass-card position-absolute bottom-0 start-0 mb-5 ms-md-5 p-3 animate__animated animate__bounceIn delay-1s" style="z-index: 20; max-width: 200px;">
+        <div class="d-flex align-items-center gap-3">
+          <div class="bg-success text-white rounded-circle p-2">
+            <i class="fas fa-truck"></i>
+          </div>
+          <div>
+            <span class="d-block fw-bold small">Free Shipping</span>
+            <span class="text-muted extra-small">On orders over $100</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+</section>
+
+<!-- Categories Section -->
+<section class="py-5 my-5">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <h2 class="fw-bold display-6">Shop by Category</h2>
+      <p class="text-muted">Explore our wide range of collections</p>
+    </div>
+    
+    <div class="row g-4 justify-content-center">
+      <% @categories.each_with_index do |cat, index| %>
+        <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="<%= index * 100 %>">
+          <a href="/products?category_id=<%= cat.id %>" class="text-decoration-none">
+            <div class="card h-100 border-0 bg-transparent text-center hover-lift">
+              <div class="card-body p-4 rounded-4 shadow-sm bg-white border">
+                <div class="icon-box bg-light text-primary rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                  <i class="fas fa-layer-group fa-lg"></i>
+                </div>
+                <h5 class="fw-bold text-dark"><%= cat.name %></h5>
+                <span class="text-muted small"><%= cat.products.count %> Products</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<!-- Trending Section -->
+<section class="py-5 bg-light rounded-5 mb-5" id="featured">
+  <div class="container py-4">
+    <div class="d-flex justify-content-between align-items-end mb-5" data-aos="fade-up">
+      <div>
+        <h2 class="fw-bold mb-1">Trending Now</h2>
+        <p class="text-muted mb-0">Hottest picks of the week</p>
+      </div>
+      <a href="/products" class="btn btn-outline-dark rounded-pill px-4">View All</a>
+    </div>
+
+    <div class="row g-4">
+      <% @featured_products.each_with_index do |product, index| %>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="<%= index * 100 %>">
+          <div class="card product-card h-100 border-0 shadow-sm rounded-4">
+            <div class="card-img-wrapper rounded-top-4">
+              <% if product.image.attached? %>
+                <img src="<%= url_for(product.image) %>" class="card-img-top" alt="<%= product.name %>">
+              <% else %>
+                <div class="bg-gradient-secondary d-flex align-items-center justify-content-center h-100 text-white">
+                  <i class="fas fa-image fa-3x opacity-50"></i>
+                </div>
+                <img src="https://loremflickr.com/400/400/<%= product.name.downcase.split.first %>?lock=<%= product.id %>" class="card-img-top" alt="<%= product.name %>">
+              <% end %>
+              <div class="hover-overlay">
+                 <%= form_with url: add_item_cart_path, method: :post, local: true do |f| %>
+                   <%= f.hidden_field :product_id, value: product.id %>
+                   <%= button_tag type: 'submit', class: "btn btn-light rounded-circle shadow-lg p-3 mx-2", title: "Add to Cart" do %>
+                     <i class="fas fa-cart-plus fa-lg text-primary"></i>
+                   <% end %>
+                 <% end %>
+                 <a href="<%= product_path(product) %>" class="btn btn-light rounded-circle shadow-lg p-3 mx-2" title="View Details">
+                   <i class="fas fa-eye fa-lg text-dark"></i>
+                 </a>
+              </div>
+              <% if product.stock < 5 && product.stock > 0 %>
+                <span class="position-absolute top-0 start-0 m-3 badge bg-warning text-dark shadow-sm">Low Stock</span>
+              <% end %>
+            </div>
+            
+            <div class="card-body pt-4">
+              <div class="d-flex justify-content-between mb-2">
+                <small class="text-muted text-uppercase fw-bold" style="font-size: 0.7rem;"><%= product.category.name %></small>
+                <div class="text-warning small">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+              <h5 class="card-title fw-bold mb-1">
+                <a href="<%= product_path(product) %>" class="text-dark text-decoration-none hover-primary transition-colors"><%= product.name %></a>
+              </h5>
+              <p class="text-muted small text-truncate mb-3"><%= product.description %></p>
+              
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fs-5 fw-bold text-primary">$<%= product.price %></span>
+                <% if product.stock > 0 %>
+                  <%= form_with url: add_item_cart_path, method: :post, local: true do |f| %>
+                    <%= f.hidden_field :product_id, value: product.id %>
+                    <%= button_tag type: 'submit', class: "btn btn-sm btn-outline-primary rounded-pill px-3 py-1" do %>
+                      Add +
+                    <% end %>
+                  <% end %>
+                <% else %>
+                   <button class="btn btn-sm btn-light rounded-pill px-3 py-1 text-muted" disabled>Sold Out</button>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter Callout -->
+<section class="py-5 container mb-5" data-aos="fade-up">
+  <div class="bg-dark text-white rounded-5 p-5 position-relative overflow-hidden">
+    <div class="position-absolute top-0 end-0 p-5 opacity-25">
+       <i class="fas fa-envelope-open-text fa-10x"></i>
+    </div>
+    <div class="row position-relative z-1">
+      <div class="col-lg-6">
+        <h2 class="fw-bold mb-3">Join our exclusive club</h2>
+        <p class="lead opacity-75 mb-4">Get 20% off your first order and stay updated with our latest drops.</p>
+        <div class="input-group input-group-lg bg-white rounded-pill p-1 shadow-lg" style="max-width: 500px;">
+          <input type="email" class="form-control border-0 rounded-pill ps-4" placeholder="Your email address">
+          <button class="btn btn-primary rounded-pill px-5">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,111 @@
+<div class="container py-5">
+  <h1 class="display-5 fw-bold mb-5 text-center" data-aos="fade-down">Shopping Cart</h1>
+
+  <% if @cart.nil? || @cart.cart_items.empty? %>
+    <div class="text-center py-5" data-aos="fade-up">
+      <div class="mb-4 text-muted opacity-25">
+        <i class="fas fa-shopping-basket fa-7x"></i>
+      </div>
+      <h3 class="fw-bold mb-3">Your cart is currently empty</h3>
+      <p class="text-muted mb-4">Looks like you haven't made your choice yet.</p>
+      <a href="/products" class="btn btn-primary btn-lg rounded-pill px-5 shadow-lg">Start Shopping</a>
+    </div>
+  <% else %>
+    <div class="row g-5">
+      <!-- Cart Items -->
+      <div class="col-lg-8" data-aos="fade-right">
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+          <div class="card-header bg-white border-bottom p-4">
+             <h5 class="fw-bold mb-0">Cart Items (<%= @cart.cart_items.count %>)</h5>
+          </div>
+          <div class="card-body p-0">
+            <% @cart.cart_items.each do |item| %>
+              <div class="p-4 border-bottom hover-bg-light transition-all">
+                <div class="row align-items-center">
+                  <div class="col-md-2">
+                    <div class="card border-0 rounded-3 overflow-hidden">
+                       <img src="https://loremflickr.com/150/150/<%= item.product.name.downcase.split.first %>?lock=<%= item.product.id %>" class="img-fluid" alt="<%= item.product.name %>">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <h5 class="fw-bold mb-1"><a href="<%= product_path(item.product) %>" class="text-decoration-none text-dark"><%= item.product.name %></a></h5>
+                    <span class="badge bg-light text-muted border"><%= item.product.category.name %></span>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="d-flex align-items-center bg-light rounded-pill p-1 border" style="width: fit-content;">
+                       <%= form_with url: update_item_cart_path(id: item.id), method: :post, class: "d-flex align-items-center gap-2 px-2" do |f| %>
+                        <span class="text-muted small">Qty:</span>
+                        <%= f.number_field :quantity, value: item.quantity, min: 1, class: "form-control form-control-sm border-0 bg-transparent text-center p-0 fw-bold", style: "width: 40px;", onchange: "this.form.submit()" %>
+                      <% end %>
+                    </div>
+                  </div>
+                  <div class="col-md-2 text-end">
+                    <h5 class="fw-bold mb-0">$<%= item.total_price %></h5>
+                    <small class="text-muted">$<%= item.product.price %> each</small>
+                  </div>
+                  <div class="col-md-1 text-end">
+                     <%= button_to remove_item_cart_path(id: item.id), method: :post, class: "btn btn-link text-danger p-0 hover-scale" do %>
+                      <i class="fas fa-times-circle fa-lg"></i>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+          <div class="card-footer bg-light p-4">
+            <div class="d-flex justify-content-between align-items-center">
+               <a href="/products" class="text-decoration-none text-muted"><i class="fas fa-arrow-left me-2"></i> Continue Shopping</a>
+               <small class="text-muted">Prices are in USD</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Summary -->
+      <div class="col-lg-4" data-aos="fade-left">
+        <div class="card border-0 shadow-lg rounded-4 bg-primary text-white position-sticky top-0" style="top: 100px; background: var(--gradient-main) !important;">
+          <div class="card-body p-4">
+            <h4 class="fw-bold mb-4">Order Summary</h4>
+            
+            <div class="d-flex justify-content-between mb-3 opacity-75">
+              <span>Subtotal</span>
+              <span>$<%= @cart.total_price %></span>
+            </div>
+            <div class="d-flex justify-content-between mb-3 opacity-75">
+              <span>Shipping</span>
+              <span>Free</span>
+            </div>
+            <div class="d-flex justify-content-between mb-3 opacity-75">
+              <span>Tax (Estimated)</span>
+              <span>$0.00</span>
+            </div>
+            
+            <hr class="bg-white opacity-25 my-4">
+            
+            <div class="d-flex justify-content-between mb-4">
+              <span class="fs-4 fw-bold">Total</span>
+              <span class="fs-4 fw-bold">$<%= @cart.total_price %></span>
+            </div>
+            
+            <%= button_to checkout_create_path(payment_method: 'card'), method: :post, class: "btn btn-white w-100 btn-lg rounded-pill shadow-sm text-primary fw-bold mb-3", data: { turbo: false } do %>
+              Pay Online (Stripe) <i class="fas fa-credit-card ms-2"></i>
+            <% end %>
+
+            <%= button_to checkout_create_path(payment_method: 'cod'), method: :post, class: "btn btn-outline-light w-100 btn-lg rounded-pill shadow-sm fw-bold", data: { turbo: false } do %>
+              Cash on Delivery (Demo) <i class="fas fa-money-bill-wave ms-2"></i>
+            <% end %>
+            
+            <div class="mt-4 pt-3 border-top border-white border-opacity-10 text-center">
+               <small class="opacity-75"><i class="fas fa-shield-alt me-1"></i> Secure Encrypted Payment</small>
+               <div class="d-flex justify-content-center gap-2 mt-2 opacity-50">
+                 <i class="fab fa-cc-visa fa-2x"></i>
+                 <i class="fab fa-cc-mastercard fa-2x"></i>
+                 <i class="fab fa-cc-amex fa-2x"></i>
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

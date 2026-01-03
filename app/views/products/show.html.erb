@@ -1,0 +1,124 @@
+<div class="container py-5">
+  <div class="row g-5">
+    <!-- Image Gallery -->
+    <div class="col-lg-6" data-aos="fade-right">
+      <div class="position-sticky top-0" style="z-index: 1;">
+        <div class="card border-0 rounded-5 overflow-hidden shadow-sm mb-3 main-image-container">
+           <% if @product.image.attached? %>
+              <img src="<%= url_for(@product.image) %>" class="img-fluid w-100" alt="<%= @product.name %>" style="min-height: 500px; object-fit: cover;">
+            <% else %>
+              <img src="https://loremflickr.com/800/800/<%= @product.name.downcase.split.first %>?lock=<%= @product.id %>" class="img-fluid w-100" alt="<%= @product.name %>" style="min-height: 500px; object-fit: cover;">
+            <% end %>
+            <div class="position-absolute top-0 end-0 m-4">
+              <button class="btn btn-light rounded-circle shadow p-3 text-danger"><i class="far fa-heart fa-lg"></i></button>
+            </div>
+        </div>
+        <div class="row g-2">
+          <% 3.times do |i| %>
+            <div class="col-3">
+              <img src="https://loremflickr.com/200/200/<%= @product.name.downcase.split.first %>?lock=<%= @product.id + i %>" class="img-fluid rounded-3 opacity-75 hover-opacity-100 cursor-pointer border" alt="Detail View">
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Details -->
+    <div class="col-lg-6" data-aos="fade-left">
+      <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/" class="text-decoration-none text-muted">Home</a></li>
+          <li class="breadcrumb-item"><a href="/products" class="text-decoration-none text-muted">Shop</a></li>
+          <li class="breadcrumb-item"><a href="/products?category_id=<%= @product.category.id %>" class="text-decoration-none text-muted"><%= @product.category.name %></a></li>
+          <li class="breadcrumb-item active" aria-current="page"><%= @product.name %></li>
+        </ol>
+      </nav>
+
+      <h1 class="display-4 fw-bold mb-2"><%= @product.name %></h1>
+      
+      <div class="d-flex align-items-center gap-3 mb-4">
+        <h2 class="text-primary fw-bold mb-0 display-6">$<%= @product.price %></h2>
+        <div class="d-flex align-items-center gap-1 text-warning">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star text-muted"></i>
+          <span class="text-muted ms-2 small">(24 Reviews)</span>
+        </div>
+      </div>
+
+      <p class="lead text-muted mb-5 lh-lg">
+        <%= @product.description %> <br>
+        Experience premium quality with this meticulously crafted item. Designed for modern life, it combines aesthetic appeal with functional excellence.
+      </p>
+
+      <div class="row mb-5">
+        <div class="col-6">
+          <h6 class="fw-bold mb-3">Color</h6>
+          <div class="d-flex gap-2">
+            <button class="btn btn-dark rounded-circle border border-2 border-white shadow-sm p-3 position-relative"></button>
+            <button class="btn btn-secondary rounded-circle border border-2 border-white shadow-sm p-3"></button>
+            <button class="btn btn-primary rounded-circle border border-2 border-white shadow-sm p-3"></button>
+          </div>
+        </div>
+        <div class="col-6">
+           <h6 class="fw-bold mb-3">Availability</h6>
+           <% if @product.stock > 0 %>
+             <div class="d-flex align-items-center text-success">
+               <i class="fas fa-check-circle me-2"></i> 
+               <span>In Stock (<%= @product.stock %> units)</span>
+             </div>
+           <% else %>
+              <div class="d-flex align-items-center text-danger">
+               <i class="fas fa-times-circle me-2"></i> 
+               <span>Out of Stock</span>
+             </div>
+           <% end %>
+        </div>
+      </div>
+
+      <hr class="my-5 opacity-10">
+
+      <div class="d-flex gap-3 align-items-end">
+        <div class="flex-grow-1">
+           <%= form_with url: add_item_cart_path, method: :post, local: true, class: "d-flex gap-3" do |f| %>
+             <%= f.hidden_field :product_id, value: @product.id %>
+             <%= button_tag type: 'submit', class: "btn btn-primary btn-lg rounded-pill px-5 flex-grow-1 shadow-lg py-3", disabled: @product.stock <= 0 do %>
+                <i class="fas fa-shopping-bag me-2"></i> Add to Cart
+             <% end %>
+           <% end %>
+        </div>
+      </div>
+
+      <!-- Features Accordion -->
+      <div class="accordion accordion-flush mt-5" id="productAccordion">
+        <div class="accordion-item border-0 border-bottom">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed fw-bold bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne">
+              Product Details
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+            <div class="accordion-body text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item border-0 border-bottom">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed fw-bold bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo">
+              Shipping & Returns
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+            <div class="accordion-body text-muted">
+              Free shipping on all orders over $100. Returns accepted within 30 days of purchase.
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>

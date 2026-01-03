@@ -1,0 +1,105 @@
+<div class="row g-0 min-vh-100 m-0">
+  <!-- Left Side: Branding/Image -->
+  <div class="col-lg-6 d-none d-lg-block position-relative overflow-hidden">
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25" style="z-index: 1;"></div>
+    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1632&q=80" 
+         class="w-100 h-100 object-fit-cover animate__animated animate__pulse animate__slower animate__infinite" 
+         alt="Login Background"
+         style="object-fit: cover;">
+         
+    <div class="position-absolute top-50 start-50 translate-middle text-center text-white" style="z-index: 2;">
+      <h1 class="display-1 fw-bold mb-3 animate__animated animate__fadeInUp">RubyMart</h1>
+      <p class="h3 fw-light animate__animated animate__fadeInUp animate__delay-1s">Elevate Your Lifestyle</p>
+    </div>
+    
+    <div class="position-absolute bottom-0 start-0 p-5 text-white" style="z-index: 2;">
+       <p class="mb-0 small opacity-75">&copy; 2026 RubyMart Inc. All Rights Reserved.</p>
+    </div>
+  </div>
+
+  <!-- Right Side: Form -->
+  <div class="col-lg-6 d-flex align-items-center justify-content-center bg-light">
+    <div class="w-100 p-5" style="max-width: 500px;" data-aos="fade-left">
+      <div class="text-center mb-5">
+        <div class="mb-4 d-inline-block bg-white shadow-sm p-3 rounded-circle">
+           <i class="fas fa-gem fa-2x text-primary text-gradient"></i>
+        </div>
+        <h2 class="fw-bold mb-2">Welcome Back!</h2>
+        <p class="text-muted">Please enter your details to sign in.</p>
+      </div>
+
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "needs-validation" }) do |f| %>
+        
+        <!-- Email Input -->
+        <div class="form-floating mb-3">
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control rounded-4 border-0 shadow-sm bg-white", placeholder: "name@example.com" %>
+          <%= f.label :email, class: "text-muted ps-4" %>
+        </div>
+
+        <!-- Password Input -->
+        <div class="form-floating mb-4">
+          <%= f.password_field :password, autocomplete: "current-password", class: "form-control rounded-4 border-0 shadow-sm bg-white", placeholder: "Password" %>
+          <%= f.label :password, class: "text-muted ps-4" %>
+        </div>
+
+        <!-- Remember Me & Forgot Password -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <% if devise_mapping.rememberable? %>
+            <div class="form-check">
+              <%= f.check_box :remember_me, class: "form-check-input" %>
+              <%= f.label :remember_me, class: "form-check-label text-muted small" %>
+            </div>
+          <% end %>
+          
+          <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+            <%= link_to "Forgot Password?", new_password_path(resource_name), class: "text-decoration-none small fw-bold text-primary" %>
+          <% end %>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="d-grid gap-2 mb-4">
+          <%= f.submit "Sign In", class: "btn btn-primary btn-lg rounded-pill shadow-lg fw-bold py-3 hover-lift" %>
+        </div>
+
+        <!-- Social Login (Mock) -->
+        <div class="position-relative text-center mb-4">
+           <hr class="bg-secondary opacity-25">
+           <span class="position-absolute top-50 start-50 translate-middle px-3 bg-light text-muted small">Or continue with</span>
+        </div>
+        
+        <div class="d-flex gap-3 justify-content-center mb-5">
+          <button type="button" class="btn btn-white border rounded-circle shadow-sm p-3 hover-scale text-danger">
+            <i class="fab fa-google fa-lg"></i>
+          </button>
+          <button type="button" class="btn btn-white border rounded-circle shadow-sm p-3 hover-scale text-primary">
+            <i class="fab fa-facebook-f fa-lg"></i>
+          </button>
+          <button type="button" class="btn btn-white border rounded-circle shadow-sm p-3 hover-scale text-dark">
+            <i class="fab fa-apple fa-lg"></i>
+          </button>
+        </div>
+
+        <!-- Sign Up Link -->
+        <div class="text-center">
+          <p class="text-muted">Don't have an account? 
+            <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+              <%= link_to "Create Account", new_registration_path(resource_name), class: "fw-bold text-primary text-decoration-none" %>
+            <% end %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Local Overrides for Auth Page specifically to hide standard navbar if desired, or blend it */
+  /* For this specific layout, we might want to hide the global navbar/footer or let them be. 
+     The layout uses 'row g-0 min-vh-100' which might overlap with the global layout's container structure 
+     if we are not careful.
+     
+     In Rails 7 standard setup, this renders INSIDE layouts/application.html.erb.
+     So we have a navbar on top. With 'min-vh-100', it will just be a long page.
+     Ideally, we'd use a separate layout 'auth.html.erb', but for simplicity, we'll let it render with the navbar.
+  */
+</style>

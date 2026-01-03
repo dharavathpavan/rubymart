@@ -1,0 +1,93 @@
+@import "active_admin/mixins";
+@import "active_admin/base";
+
+/* Modern Active Admin Overrides */
+$primary-color: #6366f1;
+$secondary-color: #ec4899;
+
+body.active_admin {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+
+    #header {
+        background: #1e293b;
+        border-bottom: 3px solid $primary-color;
+
+        a,
+        a:link,
+        a:visited {
+            color: #f8fafc;
+        }
+
+        ul.tabs>li.current>a {
+            background: $primary-color;
+            border-radius: 4px;
+        }
+    }
+
+    .dashboard-stat {
+        text-align: center;
+        padding: 20px;
+        border-radius: 8px;
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        span {
+            text-transform: uppercase;
+            font-size: 0.8em;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+
+        &.positive {
+            color: #10b981;
+        }
+
+        &.neutral {
+            color: #3b82f6;
+        }
+
+        &.negative {
+            color: #ef4444;
+        }
+    }
+
+    /* Table Modernization */
+    table.index_table {
+        th {
+            background: #f1f5f9;
+            text-transform: uppercase;
+            font-size: 0.75em;
+            letter-spacing: 0.05em;
+            color: #64748b;
+        }
+
+        td {
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        tr.even td {
+            background: #f8fafc;
+        }
+    }
+
+    /* Buttons */
+    a.button,
+    input[type=submit] {
+        background: $primary-color;
+        border-radius: 4px;
+        background-image: none;
+        text-shadow: none;
+        border: none;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: all 0.2s;
+
+        &:hover {
+            background: darken($primary-color, 10%);
+            transform: translateY(-1px);
+        }
+    }
+}

@@ -1,0 +1,144 @@
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8 text-center mb-5" data-aos="fade-up">
+      <h1 class="display-4 fw-bold mb-3">Track Your Order</h1>
+      <p class="text-muted lead">Enter your order ID below to check the current status of your shipment.</p>
+    </div>
+  </div>
+
+  <div class="row justify-content-center mb-5" data-aos="fade-up" data-aos-delay="100">
+    <div class="col-lg-6">
+      <div class="card border-0 shadow-lg rounded-pill p-1">
+        <%= form_with url: track_orders_path, method: :get, class: "d-flex", local: true do |f| %>
+          <%= f.text_field :order_id, value: params[:order_id], class: "form-control border-0 rounded-pill ps-4 py-3 shadow-none", placeholder: "Enter Order ID (e.g., 1)" %>
+          <%= button_tag type: 'submit', class: "btn btn-primary rounded-pill px-5 m-1 fw-bold" do %>
+            Track <i class="fas fa-search ms-2"></i>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <% if @order %>
+    <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+      <div class="col-lg-10">
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+          <div class="card-body p-5">
+            <div class="d-flex justify-content-between align-items-center mb-5 border-bottom pb-4">
+              <div>
+                <h5 class="fw-bold mb-1">Order #<%= @order.id %></h5>
+                <p class="text-muted mb-0">Placed on <%= @order.created_at.strftime("%B %d, %Y") %></p>
+              </div>
+              <div class="text-end">
+                <span class="badge bg-primary rounded-pill px-3 py-2 text-uppercase letter-spacing-1"><%= @order.status %></span>
+              </div>
+            </div>
+
+            <!-- Animated Tracker -->
+            <div class="position-relative py-4 mb-5">
+              <!-- Progress Bar Background -->
+              <div class="position-absolute top-50 start-0 w-100 bg-light rounded-pill" style="height: 6px; transform: translateY(-50%); z-index: 1;"></div>
+              
+              <!-- Active Progress Bar -->
+              <% progress_width = case @order.status
+                 when 'pending' then '25%'
+                 when 'paid' then '50%'
+                 when 'shipped' then '75%'
+                 when 'delivered' then '100%'
+                 else '0%'
+                 end 
+              %>
+              <div class="position-absolute top-50 start-0 bg-success rounded-pill animate__animated animate__slideInLeft" style="height: 6px; transform: translateY(-50%); z-index: 2; width: <%= progress_width %>; transition: width 1s ease;">
+                 <div class="position-absolute top-50 end-0 translate-middle p-2 bg-success border border-4 border-white rounded-circle shadow-sm" style="width: 20px; height: 20px;"></div>
+              </div>
+
+              <!-- Steps -->
+              <div class="d-flex justify-content-between position-relative" style="z-index: 3;">
+                <!-- Step 1 -->
+                <div class="text-center step-item <%= 'active' if ['pending', 'paid', 'shipped', 'delivered'].include?(@order.status) %>">
+                  <div class="step-icon bg-white border border-2 rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3 shadow-sm" style="width: 50px; height: 50px;">
+                    <i class="fas fa-clipboard-check"></i>
+                  </div>
+                  <h6 class="fw-bold mb-1">Placed</h6>
+                  <small class="text-muted"><%= @order.created_at.strftime("%I:%M %p") %></small>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center step-item <%= 'active' if ['paid', 'shipped', 'delivered'].include?(@order.status) %>">
+                  <div class="step-icon bg-white border border-2 rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3 shadow-sm" style="width: 50px; height: 50px;">
+                    <i class="fas fa-box-open"></i>
+                  </div>
+                  <h6 class="fw-bold mb-1">Processing</h6>
+                  <small class="text-muted">Analyzing</small>
+                </div>
+
+                <!-- Step 3 (Mocked for demo as usually apps don't have shipped status yet) -->
+                <div class="text-center step-item <%= 'active' if ['shipped', 'delivered'].include?(@order.status) %>">
+                  <div class="step-icon bg-white border border-2 rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3 shadow-sm" style="width: 50px; height: 50px;">
+                    <i class="fas fa-shipping-fast"></i>
+                  </div>
+                  <h6 class="fw-bold mb-1">Shipped</h6>
+                  <small class="text-muted">On the way</small>
+                </div>
+
+                <!-- Step 4 -->
+                 <div class="text-center step-item <%= 'active' if ['delivered'].include?(@order.status) %>">
+                  <div class="step-icon bg-white border border-2 rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3 shadow-sm" style="width: 50px; height: 50px;">
+                    <i class="fas fa-home"></i>
+                  </div>
+                  <h6 class="fw-bold mb-1">Delivered</h6>
+                  <small class="text-muted">Arrived</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-4 mt-4 bg-light rounded-4 p-4">
+               <div class="col-md-6">
+                 <h6 class="fw-bold mb-3">Shipping Address</h6>
+                 <div class="d-flex gap-3">
+                   <div class="bg-white p-3 rounded-circle shadow-sm text-primary" style="height: fit-content;">
+                     <i class="fas fa-map-marker-alt fa-lg"></i>
+                   </div>
+                   <div>
+                     <p class="mb-1 fw-bold"><%= @order.user.email %></p>
+                     <p class="text-muted mb-0 small">
+                       123 Ruby Street, Code Valley<br>
+                       Tech City, TC 90210<br>
+                       United States
+                     </p>
+                   </div>
+                 </div>
+               </div>
+               <div class="col-md-6">
+                 <h6 class="fw-bold mb-3">Estimated Delivery</h6>
+                 <div class="d-flex gap-3">
+                   <div class="bg-white p-3 rounded-circle shadow-sm text-success" style="height: fit-content;">
+                     <i class="fas fa-clock fa-lg"></i>
+                   </div>
+                   <div>
+                     <p class="mb-1 fw-bold"><%= (@order.created_at + 3.days).strftime("%A, %B %d") %></p>
+                     <p class="text-muted mb-0 small">By end of day</p>
+                   </div>
+                 </div>
+               </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<style>
+  .step-item.active .step-icon {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    border-color: var(--primary-color) !important;
+    animation: bounceIn 0.8s;
+  }
+  
+  .step-item:not(.active) .step-icon {
+    color: #cbd5e1;
+  }
+</style>

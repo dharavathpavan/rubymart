@@ -1,0 +1,62 @@
+<div class="row g-0 min-vh-100 m-0">
+  <!-- Left Side: Branding/Image -->
+  <div class="col-lg-6 d-none d-lg-block position-relative overflow-hidden">
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-50" style="z-index: 1; mix-blend-mode: multiply;"></div>
+    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+         class="w-100 h-100 object-fit-cover animate__animated animate__pulse animate__slower animate__infinite" 
+         alt="Signup Background"
+         style="object-fit: cover;">
+         
+    <div class="position-absolute top-50 start-50 translate-middle text-center text-white" style="z-index: 2;">
+      <h1 class="display-1 fw-bold mb-3 animate__animated animate__fadeInUp">Join Us</h1>
+      <p class="h3 fw-light animate__animated animate__fadeInUp animate__delay-1s">Experience Shopping Reimagined</p>
+    </div>
+  </div>
+
+  <!-- Right Side: Form -->
+  <div class="col-lg-6 d-flex align-items-center justify-content-center bg-light">
+    <div class="w-100 p-5" style="max-width: 500px;" data-aos="fade-right">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold mb-2">Create Account</h2>
+        <p class="text-muted">Start your journey with RubyMart today.</p>
+      </div>
+
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "needs-validation" }) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+
+        <!-- Email Input -->
+        <div class="form-floating mb-3">
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control rounded-4 border-0 shadow-sm bg-white", placeholder: "name@example.com" %>
+          <%= f.label :email, class: "text-muted ps-4" %>
+        </div>
+
+        <!-- Password Input -->
+        <div class="form-floating mb-3">
+          <%= f.password_field :password, autocomplete: "new-password", class: "form-control rounded-4 border-0 shadow-sm bg-white", placeholder: "Password" %>
+          <%= f.label :password, class: "text-muted ps-4" %>
+          <% if @minimum_password_length %>
+            <div class="form-text ms-3"><small>(<%= @minimum_password_length %> characters minimum)</small></div>
+          <% end %>
+        </div>
+
+        <!-- Password Confirm Input -->
+        <div class="form-floating mb-4">
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control rounded-4 border-0 shadow-sm bg-white", placeholder: "Confirm Password" %>
+          <%= f.label :password_confirmation, "Confirm Password", class: "text-muted ps-4" %>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="d-grid gap-2 mb-4">
+          <%= f.submit "Sign Up", class: "btn btn-dark btn-lg rounded-pill shadow-lg fw-bold py-3 hover-lift" %>
+        </div>
+
+        <!-- Sign In Link -->
+        <div class="text-center">
+          <p class="text-muted">Already have an account? 
+            <%= link_to "Log In", new_session_path(resource_name), class: "fw-bold text-primary text-decoration-none" %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
