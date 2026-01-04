@@ -7,3 +7,4 @@ test
 spec
 node_modules
 run_local.bat
+Gemfile.lock
