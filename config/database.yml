@@ -12,9 +12,8 @@ test:
   database: storage/test.sqlite3
 
 production:
+  <<: *default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: ruby_mart_production
-  username: ruby_mart
-  password: <%= ENV["RUBY_MART_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>

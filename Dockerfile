@@ -17,5 +17,10 @@ ENV RAILS_ENV=production
 ENV SECRET_KEY_BASE=dummy_build_key
 RUN bundle exec rake assets:precompile
 
+# Start script to run migrations and then server
+COPY entrypoint.sh /usr/bin/
+RUN chmod +x /usr/bin/entrypoint.sh
+ENTRYPOINT ["entrypoint.sh"]
+
 EXPOSE 3000
-CMD ["rails", "server", "-b", "0.0.0.0"]
+CMD ["rails", "server", "-b", "0.0.0.0", "-p", "3000"]
