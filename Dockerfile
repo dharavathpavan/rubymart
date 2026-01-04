@@ -15,6 +15,8 @@ COPY . .
 # Precompile assets
 ENV RAILS_ENV=production
 ENV SECRET_KEY_BASE=dummy_build_key
+ENV RAILS_SERVE_STATIC_FILES=true
+ENV RAILS_LOG_TO_STDOUT=true
 RUN bundle exec rake assets:precompile
 
 # Start script to run migrations and then server
