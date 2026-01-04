@@ -1,0 +1,9 @@
+.git
+.gitignore
+.env
+tmp
+log
+test
+spec
+node_modules
+rank_local.bat
