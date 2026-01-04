@@ -6,4 +6,4 @@ log
 test
 spec
 node_modules
-rank_local.bat
+run_local.bat
