@@ -11124,3 +11124,953 @@ Processing by Admin::OrdersController#show as HTML
 Completed 200 OK in 169ms (Views: 153.4ms | ActiveRecord: 2.8ms | Allocations: 28790)
 
 
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@rubymart.com"], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "Electronics"], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "Clothing"], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "Home & Kitchen"], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "Sports & Outdoors"], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "Beauty & Health"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."name" = ? LIMIT ?[0m  [["name", "Ultra 4K Smart TV"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."name" = ? LIMIT ?[0m  [["name", "Noise-Cancelling Headphones Pro"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."name" = ? LIMIT ?[0m  [["name", "Smartphone Galaxy Z"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."name" = ? LIMIT ?[0m  [["name", "Wireless Earbuds Basic"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."name" = ? LIMIT ?[0m  [["name", "Gaming Laptop Xtreme"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."name" = ? LIMIT ?[0m  [["name", "Classic Denim Jacket"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."name" = ? LIMIT ?[0m  [["name", "Cotton Crew Neck T-Shirt"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."name" = ? LIMIT ?[0m  [["name", "Athletic Running Sneakers"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."name" = ? LIMIT ?[0m  [["name", "Wool Blend Coat"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."name" = ? LIMIT ?[0m  [["name", "Slim Fit Chinos"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."name" = ? LIMIT ?[0m  [["name", "Smart Coffee Maker"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."name" = ? LIMIT ?[0m  [["name", "Robotic Vacuum Cleaner"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."name" = ? LIMIT ?[0m  [["name", "Ceramic Cookware Set"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."name" = ? LIMIT ?[0m  [["name", "Modern LED Floor Lamp"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."name" = ? LIMIT ?[0m  [["name", "Yoga Mat Premium"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."name" = ? LIMIT ?[0m  [["name", "Dumbbell Set Adjustable"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."name" = ? LIMIT ?[0m  [["name", "Camping Tent 4-Person"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."name" = ? LIMIT ?[0m  [["name", "Organic Face Serum"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."name" = ? LIMIT ?[0m  [["name", "Electric Toothbrush Sonic"], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2026-01-08 00:47:43 +0530
+Started GET "/" for ::1 at 2026-01-08 00:47:43 +0530
+Started GET "/" for 127.0.0.1 at 2026-01-08 00:47:44 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `set_cart'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `set_cart'
+Started GET "/" for ::1 at 2026-01-08 00:47:44 +0530
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `set_cart'
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/home/index.html.erb:73:in `each_with_index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/home/index.html.erb:73:in `each_with_index'
+  [1m[36mProduct Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 4]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 5]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 6]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 7]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (stock > 0) LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/home/index.html.erb:104:in `each_with_index'
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 4]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 5]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 6]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 7]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (stock > 0) LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/home/index.html.erb:104:in `each_with_index'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+Processing by HomeController#index as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  Rendered home/index.html.erb within layouts/application (Duration: 169.4ms | Allocations: 40507)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `set_cart'
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/home/index.html.erb:73:in `each_with_index'
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 4]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 5]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 6]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 7]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (stock > 0) LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/home/index.html.erb:104:in `each_with_index'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  Rendered home/index.html.erb within layouts/application (Duration: 173.0ms | Allocations: 19609)
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  Rendered home/index.html.erb within layouts/application (Duration: 407.0ms | Allocations: 76070)
+Started GET "/" for ::1 at 2026-01-08 00:47:45 +0530
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `set_cart'
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/home/index.html.erb:73:in `each_with_index'
+  [1m[36mProduct Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 4]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 5]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 6]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 7]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (stock > 0) LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/home/index.html.erb:104:in `each_with_index'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  Rendered home/index.html.erb within layouts/application (Duration: 144.9ms | Allocations: 29511)
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `set_cart'
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/home/index.html.erb:73:in `each_with_index'
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 4]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 5]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 6]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 7]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (stock > 0) LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/home/index.html.erb:104:in `each_with_index'
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  Rendered home/index.html.erb within layouts/application (Duration: 176.9ms | Allocations: 22216)
+  [1m[36mCartItem Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:228
+  Rendered layout layouts/application.html.erb (Duration: 2223.0ms | Allocations: 292531)
+Completed 200 OK in 2580ms (Views: 2340.1ms | ActiveRecord: 8.3ms | Allocations: 315318)
+
+
+  [1m[36mCartItem Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:228
+  Rendered layout layouts/application.html.erb (Duration: 2140.5ms | Allocations: 268370)
+Completed 200 OK in 2207ms (Views: 2138.7ms | ActiveRecord: 8.2ms | Allocations: 285798)
+
+
+  [1m[36mCartItem Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:228
+  Rendered layout layouts/application.html.erb (Duration: 2477.2ms | Allocations: 327798)
+Completed 200 OK in 2839ms (Views: 2593.2ms | ActiveRecord: 13.5ms | Allocations: 350956)
+
+
+Started GET "/" for ::1 at 2026-01-08 00:47:47 +0530
+  [1m[36mCartItem Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:228
+  Rendered layout layouts/application.html.erb (Duration: 1981.7ms | Allocations: 226179)
+Completed 200 OK in 2015ms (Views: 1978.3ms | ActiveRecord: 8.1ms | Allocations: 233040)
+
+
+Started GET "/" for ::1 at 2026-01-08 00:47:47 +0530
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `set_cart'
+  [1m[36mCart Load (1.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/home/index.html.erb:73:in `each_with_index'
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 4]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 5]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 6]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 7]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (stock > 0) LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/home/index.html.erb:104:in `each_with_index'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mCartItem Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 2], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  Rendered home/index.html.erb within layouts/application (Duration: 85.3ms | Allocations: 22052)
+  ↳ app/views/layouts/application.html.erb:228
+  Rendered layout layouts/application.html.erb (Duration: 1624.3ms | Allocations: 193892)
+Completed 200 OK in 1660ms (Views: 1620.8ms | ActiveRecord: 9.0ms | Allocations: 196970)
+
+
+Started GET "/" for ::1 at 2026-01-08 00:47:47 +0530
+  [1m[36mCartItem Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:228
+  Rendered layout layouts/application.html.erb (Duration: 108.7ms | Allocations: 25013)
+Completed 200 OK in 125ms (Views: 103.6ms | ActiveRecord: 8.0ms | Allocations: 29907)
+
+
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `set_cart'
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/home/index.html.erb:73:in `each_with_index'
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 4]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 5]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 6]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 7]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (stock > 0) LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/home/index.html.erb:104:in `each_with_index'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  Rendered home/index.html.erb within layouts/application (Duration: 69.1ms | Allocations: 18435)
+  [1m[36mCartItem Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:228
+  Rendered layout layouts/application.html.erb (Duration: 83.3ms | Allocations: 20299)
+Completed 200 OK in 108ms (Views: 89.1ms | ActiveRecord: 7.5ms | Allocations: 22308)
+
+
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `set_cart'
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/home/index.html.erb:73:in `each_with_index'
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 4]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 5]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 6]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 7]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (stock > 0) LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/home/index.html.erb:104:in `each_with_index'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  Rendered home/index.html.erb within layouts/application (Duration: 66.4ms | Allocations: 18367)
+  [1m[36mCartItem Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:228
+  Rendered layout layouts/application.html.erb (Duration: 78.0ms | Allocations: 20180)
+Completed 200 OK in 90ms (Views: 72.1ms | ActiveRecord: 7.9ms | Allocations: 22165)
+
+
+Started GET "/favicon.ico" for ::1 at 2026-01-08 00:47:51 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/orders/track" for ::1 at 2026-01-08 00:48:23 +0530
+Processing by OrdersController#track as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `set_cart'
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/track.html.erb within layouts/application
+  Rendered orders/track.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1434)
+  [1m[36mCartItem Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:228
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 3333)
+Completed 200 OK in 63ms (Views: 34.2ms | ActiveRecord: 2.1ms | Allocations: 6423)
+
+
+Started GET "/" for ::1 at 2026-01-08 00:48:27 +0530
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `set_cart'
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/home/index.html.erb:73:in `each_with_index'
+  [1m[36mProduct Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 4]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 5]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 6]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 7]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Load (1.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (stock > 0) LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/home/index.html.erb:104:in `each_with_index'
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  Rendered home/index.html.erb within layouts/application (Duration: 110.8ms | Allocations: 18366)
+  [1m[36mCartItem Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:228
+  Rendered layout layouts/application.html.erb (Duration: 131.3ms | Allocations: 20179)
+Completed 200 OK in 150ms (Views: 120.3ms | ActiveRecord: 14.8ms | Allocations: 22031)
+
+
+Started POST "/cart/add_item" for ::1 at 2026-01-08 00:49:25 +0530
+Processing by CartsController#add_item as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product_id"=>"2", "button"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `set_cart'
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `set_cart'
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:9:in `add_item'
+  [1m[36mCartItem Load (0.5ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."cart_id" = ? AND "cart_items"."product_id" = ? LIMIT ?[0m  [["cart_id", 2], ["product_id", 2], ["LIMIT", 1]]
+  ↳ app/models/cart.rb:11:in `add_product'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/carts_controller.rb:11:in `add_item'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:11:in `add_item'
+  [1m[36mCartItem Create (1.4ms)[0m  [1m[32mINSERT INTO "cart_items" ("cart_id", "product_id", "quantity", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["cart_id", 2], ["product_id", 2], ["quantity", 1], ["created_at", "2026-01-07 19:19:25.887244"], ["updated_at", "2026-01-07 19:19:25.887244"]]
+  ↳ app/controllers/carts_controller.rb:11:in `add_item'
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/carts_controller.rb:11:in `add_item'
+Redirected to http://localhost:3000/cart
+Completed 302 Found in 50ms (ActiveRecord: 11.9ms | Allocations: 11913)
+
+
+Started GET "/cart" for ::1 at 2026-01-08 00:49:26 +0530
+Processing by CartsController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `set_cart'
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mCartItem Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 2], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:4
+  [1m[36mCartItem Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 2]]
+  ↳ app/views/carts/show.html.erb:19
+  [1m[36mCartItem Load (0.9ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 2]]
+  ↳ app/views/carts/show.html.erb:22
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:27
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:32
+  Rendered carts/show.html.erb within layouts/application (Duration: 51.9ms | Allocations: 6567)
+  [1m[36mCACHE CartItem Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 2]]
+  ↳ app/views/layouts/application.html.erb:230
+  Rendered layout layouts/application.html.erb (Duration: 64.0ms | Allocations: 8342)
+Completed 200 OK in 91ms (Views: 74.5ms | ActiveRecord: 4.3ms | Allocations: 10548)
+
+
+Started GET "/" for ::1 at 2026-01-08 00:49:32 +0530
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `set_cart'
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/home/index.html.erb:73:in `each_with_index'
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 4]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 5]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 6]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 7]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (stock > 0) LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/home/index.html.erb:104:in `each_with_index'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  Rendered home/index.html.erb within layouts/application (Duration: 68.9ms | Allocations: 18364)
+  [1m[36mCartItem Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:228
+  [1m[36mCartItem Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 2]]
+  ↳ app/views/layouts/application.html.erb:230
+  Rendered layout layouts/application.html.erb (Duration: 87.4ms | Allocations: 20794)
+Completed 200 OK in 100ms (Views: 81.4ms | ActiveRecord: 8.0ms | Allocations: 22670)
+
+
+Started GET "/products" for ::1 at 2026-01-08 00:49:35 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `set_cart'
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/products/index.html.erb:18
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/views/products/index.html.erb:29
+  [1m[36mProduct Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/products/index.html.erb:29
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/views/products/index.html.erb:29
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 4]]
+  ↳ app/views/products/index.html.erb:29
+  [1m[36mProduct Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 5]]
+  ↳ app/views/products/index.html.erb:29
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 6]]
+  ↳ app/views/products/index.html.erb:29
+  [1m[36mProduct Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 7]]
+  ↳ app/views/products/index.html.erb:29
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE (stock > 0)[0m
+  ↳ app/views/products/index.html.erb:54
+  [1m[36mProduct Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE (stock > 0) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:70
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (stock > 0)[0m
+  ↳ app/views/products/index.html.erb:72:in `each_with_index'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:77
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:105
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:77
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:105
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:77
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:105
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:77
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:105
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:77
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:105
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:77
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:105
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 7], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:77
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:105
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:77
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:105
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:77
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:105
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:77
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:105
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:77
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:105
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:77
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:105
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:77
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:105
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:77
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:105
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 15], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:77
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:105
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 16], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:77
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:105
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 17], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:77
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:105
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 18], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:77
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:105
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 19], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:77
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:105
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 20], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:77
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:105
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 21], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:77
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:105
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 22], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:77
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:105
+  Rendered products/index.html.erb within layouts/application (Duration: 231.1ms | Allocations: 58492)
+  [1m[36mCartItem Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:228
+  [1m[36mCartItem Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 2]]
+  ↳ app/views/layouts/application.html.erb:230
+  Rendered layout layouts/application.html.erb (Duration: 242.8ms | Allocations: 60995)
+Completed 200 OK in 267ms (Views: 236.9ms | ActiveRecord: 18.9ms | Allocations: 63357)
+
+
+Started GET "/products/1" for ::1 at 2026-01-08 00:49:40 +0530
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `set_cart'
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `set_cart'
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (stock > 0) AND "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:15:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:32
+  Rendered products/show.html.erb within layouts/application (Duration: 9.3ms | Allocations: 3090)
+  [1m[36mCartItem Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:228
+  [1m[36mCartItem Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 2]]
+  ↳ app/views/layouts/application.html.erb:230
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 5512)
+Completed 200 OK in 40ms (Views: 22.6ms | ActiveRecord: 3.1ms | Allocations: 8071)
+
+
+Started POST "/cart/add_item" for ::1 at 2026-01-08 00:50:00 +0530
+Processing by CartsController#add_item as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product_id"=>"1", "button"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `set_cart'
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `set_cart'
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:9:in `add_item'
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."cart_id" = ? AND "cart_items"."product_id" = ? LIMIT ?[0m  [["cart_id", 2], ["product_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cart.rb:11:in `add_product'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/carts_controller.rb:11:in `add_item'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:11:in `add_item'
+  [1m[36mCartItem Create (1.8ms)[0m  [1m[32mINSERT INTO "cart_items" ("cart_id", "product_id", "quantity", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["cart_id", 2], ["product_id", 1], ["quantity", 1], ["created_at", "2026-01-07 19:20:01.151678"], ["updated_at", "2026-01-07 19:20:01.151678"]]
+  ↳ app/controllers/carts_controller.rb:11:in `add_item'
+  [1m[36mTRANSACTION (7.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/carts_controller.rb:11:in `add_item'
+Redirected to http://localhost:3000/cart
+Completed 302 Found in 43ms (ActiveRecord: 12.3ms | Allocations: 5818)
+
+
+Started GET "/cart" for ::1 at 2026-01-08 00:50:01 +0530
+Processing by CartsController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `set_cart'
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mCartItem Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 2], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:4
+  [1m[36mCartItem Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 2]]
+  ↳ app/views/carts/show.html.erb:19
+  [1m[36mCartItem Load (0.5ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 2]]
+  ↳ app/views/carts/show.html.erb:22
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:27
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:32
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:32
+  Rendered carts/show.html.erb within layouts/application (Duration: 35.4ms | Allocations: 7107)
+  [1m[36mCACHE CartItem Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 2]]
+  ↳ app/views/layouts/application.html.erb:230
+  Rendered layout layouts/application.html.erb (Duration: 52.2ms | Allocations: 8810)
+Completed 200 OK in 67ms (Views: 51.1ms | ActiveRecord: 4.1ms | Allocations: 10655)
+
+
+Started POST "/checkout/create?payment_method=cod" for ::1 at 2026-01-08 00:50:07 +0530
+Processing by CheckoutController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "payment_method"=>"cod"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `set_cart'
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `set_cart'
+  [1m[36mCartItem Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/checkout_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/cart.rb:7:in `total_price'
+  [1m[36mCartItem Load (0.5ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 2]]
+  ↳ app/models/cart.rb:7:in `total_price'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/cart.rb:7:in `block in total_price'
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/cart.rb:7:in `block in total_price'
+  [1m[36mOrder Create (2.0ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total_price", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["total_price", 1199.98], ["status", 1], ["created_at", "2026-01-07 19:20:07.806116"], ["updated_at", "2026-01-07 19:20:07.806116"]]
+  ↳ app/controllers/checkout_controller.rb:76:in `block in handle_mock_order'
+  [1m[36mOrderItem Create (0.4ms)[0m  [1m[32mINSERT INTO "order_items" ("order_id", "product_id", "quantity", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["order_id", 3], ["product_id", 2], ["quantity", 1], ["price", 199.99], ["created_at", "2026-01-07 19:20:07.829968"], ["updated_at", "2026-01-07 19:20:07.829968"]]
+  ↳ app/controllers/checkout_controller.rb:82:in `block (2 levels) in handle_mock_order'
+  [1m[36mOrderItem Create (0.2ms)[0m  [1m[32mINSERT INTO "order_items" ("order_id", "product_id", "quantity", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["order_id", 3], ["product_id", 1], ["quantity", 1], ["price", 999.99], ["created_at", "2026-01-07 19:20:07.834224"], ["updated_at", "2026-01-07 19:20:07.834224"]]
+  ↳ app/controllers/checkout_controller.rb:82:in `block (2 levels) in handle_mock_order'
+  [1m[36mCartItem Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/checkout_controller.rb:89:in `block in handle_mock_order'
+  [1m[36mCartItem Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/checkout_controller.rb:89:in `block in handle_mock_order'
+  [1m[36mTRANSACTION (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/checkout_controller.rb:75:in `handle_mock_order'
+Redirected to http://localhost:3000/checkout/success?mock=true
+Completed 302 Found in 80ms (ActiveRecord: 13.9ms | Allocations: 18606)
+
+
+Started GET "/checkout/success?mock=true" for ::1 at 2026-01-08 00:50:07 +0530
+Processing by CheckoutController#success as HTML
+  Parameters: {"mock"=>"true"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `set_cart'
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering checkout/success.html.erb within layouts/application
+  Rendered checkout/success.html.erb within layouts/application (Duration: 1.0ms | Allocations: 100)
+  [1m[36mCartItem Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:228
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 2004)
+Completed 200 OK in 41ms (Views: 26.2ms | ActiveRecord: 1.4ms | Allocations: 4281)
+
+
+Started GET "/orders" for ::1 at 2026-01-08 00:50:14 +0530
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `set_cart'
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "orders" WHERE "orders"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:4
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ? ORDER BY "orders"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/orders/index.html.erb:8
+  [1m[36mOrderItem Load (0.5ms)[0m  [1m[34mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = ?[0m  [["order_id", 3]]
+  ↳ app/views/orders/index.html.erb:36
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:38
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:38
+  Rendered orders/index.html.erb within layouts/application (Duration: 33.6ms | Allocations: 5464)
+  [1m[36mCartItem Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:228
+  Rendered layout layouts/application.html.erb (Duration: 49.0ms | Allocations: 7302)
+Completed 200 OK in 67ms (Views: 48.0ms | ActiveRecord: 3.6ms | Allocations: 9428)
+
+
+Started GET "/orders/track" for ::1 at 2026-01-08 00:50:29 +0530
+Processing by OrdersController#track as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `set_cart'
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/track.html.erb within layouts/application
+  Rendered orders/track.html.erb within layouts/application (Duration: 0.8ms | Allocations: 773)
+  [1m[36mCartItem Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:228
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 2578)
+Completed 200 OK in 27ms (Views: 15.7ms | ActiveRecord: 1.2ms | Allocations: 4418)
+
+
+Started GET "/orders/track?order_id=2&button=" for ::1 at 2026-01-08 00:50:36 +0530
+Processing by OrdersController#track as HTML
+  Parameters: {"order_id"=>"2", "button"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `set_cart'
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `set_cart'
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:15:in `track'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/track.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/track.html.erb:103
+  Rendered orders/track.html.erb within layouts/application (Duration: 7.8ms | Allocations: 2279)
+  [1m[36mCartItem Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:228
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 4084)
+Completed 200 OK in 38ms (Views: 22.6ms | ActiveRecord: 2.3ms | Allocations: 7021)
+
+
+Started GET "/" for ::1 at 2026-01-08 00:50:47 +0530
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `set_cart'
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/home/index.html.erb:73:in `each_with_index'
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 4]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 5]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 6]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 7]]
+  ↳ app/views/home/index.html.erb:82
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (stock > 0) LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/home/index.html.erb:104:in `each_with_index'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:134
+  Rendered home/index.html.erb within layouts/application (Duration: 73.0ms | Allocations: 18367)
+  [1m[36mCartItem Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:228
+  Rendered layout layouts/application.html.erb (Duration: 90.7ms | Allocations: 20191)
+Completed 200 OK in 104ms (Views: 84.3ms | ActiveRecord: 9.3ms | Allocations: 22038)
+
+
